@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strrchr.c                                          :+:      :+:    :+:   */
+/*   calloc.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 15:26:07 by calle             #+#    #+#             */
-/*   Updated: 2020/11/18 16:11:27 by calle            ###   ########.fr       */
+/*   Created: 2020/11/18 17:40:29 by calle             #+#    #+#             */
+/*   Updated: 2020/11/18 18:54:08 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "stdlib.h"
 
-char *ft_strrchr(const char *s, int c)
+#include "libft.h"
+
+void *ft_calloc(size_t nmemb, size_t size)
 {
-	char *ptr_chr;
+	void *ptr;
 	
-	c = (unsigned char)c;
-	s = (char*)s;
-	ptr_chr = NULL;
-	while (*s++)
-		if (*s == c)
-			ptr_chr = (char*)s;
-	return (ptr_chr);
+	if (nmenb == 0 || size == 0)
+		return (NULL);	
+	if (!(ptr = malloc(nmenb * size)))
+		return (NULL);
+	if (ptr)
+		ft_bzero(ptr, nmemb * size);
+	return (ptr);
 }

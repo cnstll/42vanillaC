@@ -6,17 +6,17 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:39:58 by calle             #+#    #+#             */
-/*   Updated: 2020/11/17 18:19:28 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/18 15:40:59 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "stdlib.h"
 
-size_t strlen(const char *s);
+size_t ft_strlen(const char *s);
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t dst_len;
 	size_t src_len;
-	const char *ptr_src;
 	size_t i;
 	size_t len;
 	

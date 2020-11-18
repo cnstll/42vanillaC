@@ -6,7 +6,7 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 15:30:19 by calle             #+#    #+#             */
-/*   Updated: 2020/11/16 16:40:43 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/18 18:02:43 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -20,7 +20,7 @@ void			ft_bzero(void *s, size_t n)
 	ptr = s;
 	while (i < n)
 	{
-		ptr[i] = '\0';
+		ptr[i] = 0;
 		i++;
 	}
 }

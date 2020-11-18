@@ -6,15 +6,15 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 14:13:02 by calle             #+#    #+#             */
-/*   Updated: 2020/11/17 14:26:14 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/18 16:23:19 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-size_t strlen(const char *s)
+size_t			ft_strlen(const char *s)
 {
-	unsigned int i;
-	char *str;
+	unsigned int	i;
+	char		*str;
 
 	i = 0;
 	str = (char *)s;

@@ -6,9 +6,10 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:07:48 by calle             #+#    #+#             */
-/*   Updated: 2020/11/17 17:14:41 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/18 15:39:30 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "stdlib.h"
 
 int 			ft_strncmp(const char *s1, const char *s2, size_t n)
 {
