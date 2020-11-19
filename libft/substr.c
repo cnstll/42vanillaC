@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calloc.c                                           :+:      :+:    :+:   */
+/*   substr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 17:40:29 by calle             #+#    #+#             */
-/*   Updated: 2020/11/19 12:31:10 by calle            ###   ########.fr       */
+/*   Created: 2020/11/19 14:38:47 by calle             #+#    #+#             */
+/*   Updated: 2020/11/19 15:18:44 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+char		*ft_substr(char const *s, unsigned int start,size_t len)
 {
-	void *ptr;
-	
-	if (nmemb == 0 || size == 0)
-		return (NULL);	
-	if (!(ptr = malloc(nmenb * size)))
-		return (NULL);
-	if (ptr)
-		ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	char	*subs;
+	size_t	i;
+	size_t	s_size;
+
+	s_size = ft_strlen(s) - start;
+	if (s_size < len)
+	{
+		if (!(subs = (char *)malloc(sizeof(char) * (s_size + 1))))
+			return (NULL);
+	}
+	else
+		if (!(subs = (char *)malloc(sizeof(char) * (len + 1))))
+			return (NULL);
+	i = start;
+	while (i < len && s[start])
+	{
+		subs[i] = s[start];
+		i++;
+		start++;	
+	}
+	return (subs);	
 }
