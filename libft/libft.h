@@ -6,18 +6,15 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:04:04 by calle             #+#    #+#             */
-/*   Updated: 2020/11/20 19:09:43 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/23 09:40:26 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef		LIBFT_H_
 # define	LIBFT_H_
 # include	<unistd.h>
-# include 	<stdio.h>
 # include	<stdlib.h>
-# include	<string.h>
-# include	<ctype.h>
-void		*ft_memset(char *s, int c, int n);
+void		*memset(void *s, int c, size_t n);
 void		ft_bzero(char *s, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);

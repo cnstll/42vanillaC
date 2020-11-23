@@ -6,13 +6,13 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 18:29:31 by calle             #+#    #+#             */
-/*   Updated: 2020/11/20 19:12:40 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/21 17:24:56 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-	write (fd , &c, 1);	
+	write(fd, &c, 1);
 }

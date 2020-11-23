@@ -6,11 +6,11 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:12:56 by calle             #+#    #+#             */
-/*   Updated: 2020/11/17 15:56:48 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/21 19:05:56 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	c = (unsigned char)c;
 	while (*s++)

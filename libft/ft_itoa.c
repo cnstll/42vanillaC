@@ -6,12 +6,11 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 15:39:27 by calle             #+#    #+#             */
-/*   Updated: 2020/11/20 21:55:34 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/21 17:21:33 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int			integer_size(int n)
 {
@@ -19,7 +18,7 @@ int			integer_size(int n)
 	unsigned int	nb;
 
 	size = 0;
-	if(n < 0)
+	if (n < 0)
 	{
 		size++;
 		nb = -n;
@@ -29,7 +28,7 @@ int			integer_size(int n)
 	while (nb != 0)
 	{
 		nb = nb / 10;
-		size++;		
+		size++;
 	}
 	return (size);
 }
@@ -46,20 +45,19 @@ char			*ft_itoa(int n)
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	str[len] = 0;
-	if(n < 0)
+	if (n < 0)
 		nb = -n;
 	else
 		nb = n;
 	while (i > 0)
 	{
-		str[i] = (nb % 10) + 48; 
-		nb = nb / 10; 
+		str[i] = (nb % 10) + 48;
+		nb = nb / 10;
 		i--;
 	}
 	if (n < 0)
 		str[i] = '-';
 	else
-		str[i] = (nb % 10) + 48; 
-	return (str);	
-		
+		str[i] = (nb % 10) + 48;
+	return (str);
 }

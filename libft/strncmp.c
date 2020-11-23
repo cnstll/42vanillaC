@@ -6,12 +6,13 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:07:48 by calle             #+#    #+#             */
-/*   Updated: 2020/11/18 15:39:30 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/23 09:31:06 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "stdlib.h"
 
-int 			ft_strncmp(const char *s1, const char *s2, size_t n)
+#include "libft.h"
+
+int			ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
 
@@ -25,5 +26,5 @@ int 			ft_strncmp(const char *s1, const char *s2, size_t n)
 	if ((s1[i] < s2[i]) || (s1[i] > s2[i]) || (s1[i] != '\0' && s2[i] == '\0'))
 		return (s1[i] - s2[i]);
 	else
-		return (0);	
+		return (0);
 }

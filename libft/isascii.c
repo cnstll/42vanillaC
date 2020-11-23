@@ -6,13 +6,13 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 14:49:53 by calle             #+#    #+#             */
-/*   Updated: 2020/11/17 14:51:43 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/21 18:43:59 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-	if(c >= 0 && c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

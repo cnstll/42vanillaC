@@ -6,18 +6,18 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:41:47 by calle             #+#    #+#             */
-/*   Updated: 2020/11/17 13:19:12 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/21 18:54:41 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int			ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int i;
-	unsigned char *p_s1;
-	unsigned char *p_s2;
-	
+	unsigned int	i;
+	unsigned char	*p_s1;
+	unsigned char	*p_s2;
+
 	i = 0;
 	p_s1 = (unsigned char*)s1;
 	p_s2 = (unsigned char*)s2;

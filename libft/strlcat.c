@@ -6,20 +6,19 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:39:58 by calle             #+#    #+#             */
-/*   Updated: 2020/11/18 15:40:59 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/23 09:36:19 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "stdlib.h"
 
-size_t ft_strlen(const char *s);
+#include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t dst_len;
-	size_t src_len;
-	size_t i;
-	size_t len;
-	
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
+	size_t	len;
+
 	i = 0;
 	dst_len = ft_strlen((const char*)dst);
 	src_len = ft_strlen(src);
@@ -29,9 +28,8 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	while (size != 0 && i <= size - dst_len - 1 && src[i])
 	{
 		dst[len] = src[i];
-		i++;	
+		i++;
 	}
 	dst[len] = '\0';
 	return (dst_len + src_len);
-			
-} 
+}
