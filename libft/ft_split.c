@@ -6,17 +6,17 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:28:00 by calle             #+#    #+#             */
-/*   Updated: 2020/11/21 17:37:52 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/24 16:20:16 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		**write_sub_str(char **strs, char const *s, char c, int ct)
+char			**write_sub_str(char **strs, char const *s, char c, int ct)
 {
-	size_t	i;
-	int	j;
-	int	k;
+	size_t		i;
+	int		j;
+	int		k;
 
 	i = 0;
 	k = 0;
@@ -39,40 +39,39 @@ char		**write_sub_str(char **strs, char const *s, char c, int ct)
 	return (strs);
 }
 
-char		*malloc_sub_str(char **strs, char const *s, char c, int ct)
+char			*malloc_sub_str(char **strs, char const *s, char c, int ct)
 {
-	size_t	i;
-	int	j;
-	int	k;
+	size_t		i;
+	int		j;
+	static int	st_k = 0;
 
 	i = 0;
 	j = 0;
-	k = 0;
-	while (s[i] && k < ct)
+	while (s[i] && st_k < ct)
 	{
 		if ((s[i] != c))
 		{
 			j++;
 			if (s[i + 1] == c || !s[i + 1])
 			{
-				if (!(strs[k] = (char*)malloc(sizeof(char) * (j + 1))))
+				if (!(strs[st_k] = (char*)malloc(sizeof(char) * (j + 1))))
 					return (NULL);
-				k++;
+				st_k++;
 				j = 0;
 			}
 		}
 		i++;
 	}
-	if (!(strs[k] = (char*)malloc(sizeof(char))))
+	if (!(strs[st_k] = (char*)malloc(sizeof(char))))
 		return (NULL);
-	strs[k] = 0;
+	strs[st_k] = 0;
 	return ("ok");
 }
 
-int		ct_sub_str(char const *s, char c)
+int			ct_sub_str(char const *s, char c)
 {
-	int	ct;
-	size_t	i;
+	int		ct;
+	size_t		i;
 
 	ct = 0;
 	i = 0;
@@ -87,10 +86,10 @@ int		ct_sub_str(char const *s, char c)
 	return (ct + 1);
 }
 
-char		**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
-	char	**strs;
-	int	ct;
+	char		**strs;
+	int		ct;
 
 	ct = ct_sub_str(s, c);
 	if (!s[0])

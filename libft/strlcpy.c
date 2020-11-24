@@ -6,7 +6,7 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:17:27 by calle             #+#    #+#             */
-/*   Updated: 2020/11/23 09:35:49 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/23 17:34:49 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 
 	src_len = ft_strlen(src);
 	i = 0;
-	while (i < size && src[i])
+	if (size == 0 || !dst[0])
+		return (src_len);
+	while (i < size - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;

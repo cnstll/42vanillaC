@@ -6,7 +6,7 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:39:58 by calle             #+#    #+#             */
-/*   Updated: 2020/11/23 09:36:19 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/23 16:26:06 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,11 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	len = i + dst_len;
 	if (dst_len >= size)
 		return (size + src_len);
-	while (size != 0 && i <= size - dst_len - 1 && src[i])
+	while (size != 0 && i < size - dst_len - 1 && src[i])
 	{
 		dst[len] = src[i];
 		i++;
+		len++;
 	}
 	dst[len] = '\0';
 	return (dst_len + src_len);

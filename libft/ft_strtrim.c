@@ -6,15 +6,15 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:36:46 by calle             #+#    #+#             */
-/*   Updated: 2020/11/21 18:36:20 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/24 14:13:42 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_charset(char c, const char *set)
+static int		is_charset(char c, const char *set)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (set[i])
@@ -26,40 +26,54 @@ int		is_charset(char c, const char *set)
 	return (0);
 }
 
-int		ctn_charset(const char *str, const char *set)
+static int		cnt_charset_lead(const char *str, const char *set, size_t len)
 {
-	int	i;
-	int	count;
+	size_t		cnt;
 
-	i = 0;
-	while (str[i])
-	{
-		if (is_charset(str[i], set) == 0)
-			count++;
-		i++;
-	}
-	return (count);
+	cnt = 0;
+	while (is_charset(str[cnt], set) == 1 && cnt < len)
+		cnt++;
+	if (cnt == len)
+		return (0);
+	else
+		return (cnt);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+static int		cnt_charset_tail(const char *str, const char *set, size_t len)
 {
-	char	*ret;
-	int	j;
-	int	k;
+	size_t		cnt;
 
-	if (!(ret = (char *)malloc(sizeof(char) * (ctn_charset(s1, set) + 1))))
-		return (NULL);
-	j = 0;
+	cnt = len - 1;
+	while (is_charset(str[cnt], set) == 1 && cnt > 0)
+		cnt--;
+	if (cnt == 0)
+		return (len);
+	else
+		return (len - cnt - 1);
+}
+
+char			*ft_strtrim(char const *s1, char const *set)
+{
+	char		*ret;
+	size_t		j;
+	int		k;
+	size_t		len1;
+	size_t		mem;
+
+	len1 = ft_strlen(s1);
+	mem = len1 - cnt_charset_lead(s1, set, len1)
+			- cnt_charset_tail(s1, set, len1);
+	j = cnt_charset_lead(s1, set, len1);
 	k = 0;
-	while (s1[j])
+	if (!(ret = (char *)malloc(sizeof(char) * (mem))))
+		return (NULL);
+	while (s1[j] && j < len1 - cnt_charset_tail(s1, set, len1))
 	{
-		if (is_charset(s1[j], set) == 0)
-		{
-			ret[k] = s1[j];
-			k++;
-		}
+		ret[k] = s1[j];
+		k++;
 		j++;
 	}
+	k++;
 	ret[k] = '\0';
 	return (ret);
 }

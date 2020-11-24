@@ -6,7 +6,7 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:20:35 by calle             #+#    #+#             */
-/*   Updated: 2020/11/21 17:59:26 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/23 19:07:35 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	if (!(concat = (char *)malloc(sizeof(char) * (len1 + len2 + 1))))
 		return (NULL);
-	while (i <= len1)
+	while (i < len1)
 	{
 		concat[i] = s1[i];
 		i++;
@@ -32,9 +32,10 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	while (i <= len2)
 	{
-		concat[i] = s2[i];
+		concat[len1] = s2[i];
 		i++;
+		len1++;
 	}
-	concat[i] = '\0';
+	concat[len1] = '\0';
 	return (concat);
 }

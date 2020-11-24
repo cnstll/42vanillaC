@@ -6,7 +6,7 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 14:38:47 by calle             #+#    #+#             */
-/*   Updated: 2020/11/21 18:40:51 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/24 14:36:52 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,13 @@ char		*ft_substr(char const *s, unsigned int start, size_t len)
 		if (!(subs = (char *)malloc(sizeof(char) * (len + 1))))
 			return (NULL);
 	}
-	i = start;
+	i = 0;
 	while (i < len && s[start])
 	{
 		subs[i] = s[start];
 		i++;
 		start++;
 	}
+	subs[i] = '\0';
 	return (subs);
 }
