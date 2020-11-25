@@ -6,18 +6,18 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:12:56 by calle             #+#    #+#             */
-/*   Updated: 2020/11/23 18:26:09 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/24 16:39:09 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char		*ft_strchr(const char *s, int c)
 {
 	int	i;
-	
+
 	i = 0;
 	c = (unsigned char)c;
 	while (s[i] || s[i] == c || !s[0])
-	{	
+	{
 		if (s[i] == c)
 			return ((char*)s + i);
 		i++;

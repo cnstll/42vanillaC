@@ -6,7 +6,7 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 18:14:23 by calle             #+#    #+#             */
-/*   Updated: 2020/11/24 15:25:09 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/25 10:09:27 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char			*ft_strdup(const char *s)
 {
-	char		*dup;
+	char			*dup;
 	unsigned int	i;
 
 	i = 0;

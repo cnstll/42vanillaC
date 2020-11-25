@@ -6,7 +6,7 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:26:07 by calle             #+#    #+#             */
-/*   Updated: 2020/11/23 18:32:54 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/25 10:08:16 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char		*ft_strrchr(const char *s, int c)
 {
 	char	*ptr_chr;
-	int	i;
+	int		i;
 
 	c = (unsigned char)c;
 	s = (char*)s;

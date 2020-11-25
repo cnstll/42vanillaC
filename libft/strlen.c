@@ -6,20 +6,18 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 14:13:02 by calle             #+#    #+#             */
-/*   Updated: 2020/11/24 16:29:54 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/24 17:27:05 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strlen(const char *s)
+size_t				ft_strlen(const char *s)
 {
 	unsigned int	i;
-	char		*str;
 
 	i = 0;
-	str = (char *)s;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }

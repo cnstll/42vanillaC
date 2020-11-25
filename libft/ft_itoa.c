@@ -6,15 +6,15 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 15:39:27 by calle             #+#    #+#             */
-/*   Updated: 2020/11/23 18:45:56 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/25 10:13:50 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			integer_size(int n)
+static int			integer_size(int n)
 {
-	int		size;
+	int				size;
 	unsigned int	nb;
 
 	size = 0;
@@ -35,11 +35,11 @@ int			integer_size(int n)
 	return (size);
 }
 
-char			*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
-	int		len;
-	char		*str;
-	int		i;
+	int				len;
+	char			*str;
+	int				i;
 	unsigned int	nb;
 
 	len = integer_size(n);

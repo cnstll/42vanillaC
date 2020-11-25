@@ -6,7 +6,7 @@
 #    By: calle <calle@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/19 10:07:58 by calle             #+#    #+#              #
-#    Updated: 2020/11/19 12:29:42 by calle            ###   ########.fr        #
+#    Updated: 2020/11/23 11:36:12 by calle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = libft.a
@@ -35,6 +35,16 @@ SRCS = memset.c\
 	atoi.c\
 	calloc.c\
 	strdup.c\
+	ft_substr.c\
+	ft_strjoin.c\
+	ft_strtrim.c\
+	ft_split.c\
+	ft_itoa.c\
+	ft_strmapi.c\
+	ft_putchar_fd.c\
+	ft_putstr_fd.c\
+	ft_putendl_fd.c\
+	ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -42,7 +52,7 @@ HEADERS = libft.h
 
 CPLHEADERS = libft.h.gch
 
-CC = gcc
+CC = clang-9
 
 CFLAGS = -Wall -Wextra -Werror
 

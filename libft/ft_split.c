@@ -6,17 +6,17 @@
 /*   By: calle <calle@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:28:00 by calle             #+#    #+#             */
-/*   Updated: 2020/11/24 16:20:16 by calle            ###   ########.fr       */
+/*   Updated: 2020/11/25 10:12:35 by calle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			**write_sub_str(char **strs, char const *s, char c, int ct)
+static char		**write_sub_str(char **strs, char const *s, char c, int ct)
 {
 	size_t		i;
-	int		j;
-	int		k;
+	int			j;
+	int			k;
 
 	i = 0;
 	k = 0;
@@ -39,10 +39,10 @@ char			**write_sub_str(char **strs, char const *s, char c, int ct)
 	return (strs);
 }
 
-char			*malloc_sub_str(char **strs, char const *s, char c, int ct)
+static char		*malloc_sub_str(char **strs, char const *s, char c, int ct)
 {
 	size_t		i;
-	int		j;
+	int			j;
 	static int	st_k = 0;
 
 	i = 0;
@@ -68,9 +68,9 @@ char			*malloc_sub_str(char **strs, char const *s, char c, int ct)
 	return ("ok");
 }
 
-int			ct_sub_str(char const *s, char c)
+static int		ct_sub_str(char const *s, char c)
 {
-	int		ct;
+	int			ct;
 	size_t		i;
 
 	ct = 0;
@@ -89,7 +89,7 @@ int			ct_sub_str(char const *s, char c)
 char			**ft_split(char const *s, char c)
 {
 	char		**strs;
-	int		ct;
+	int			ct;
 
 	ct = ct_sub_str(s, c);
 	if (!s[0])
